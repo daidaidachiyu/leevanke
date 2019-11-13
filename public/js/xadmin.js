@@ -21,11 +21,11 @@
 
     var cate_list = this.get_cate_data();
 
-    for(var i in cate_list){
-      if(cate_list[i]!=null){
-        $('.left-nav #nav li').eq(cate_list[i]).click();
-      }
-    }
+    // for(var i in cate_list){
+    //   if(cate_list[i]!=null){
+    //     $('.left-nav #nav li').eq(cate_list[i]).click();
+    //   }
+    // }
   };
 
 	Xadmin.prototype.add_tab = function (title,url,is_refresh) {
@@ -59,7 +59,7 @@
 
 	Xadmin.prototype.add_lay_tab = function(title,url,id) {
 		element.tabAdd('xbs_tab', {
-	       title: title 
+	       title: title
 	        ,content: '<iframe tab-id="'+id+'" frameborder="0" src="'+url+'" scrolling="yes" class="x-iframe"></iframe>'
 	        ,id: id
 	    })
@@ -97,7 +97,7 @@
 	        content: url
 	    });
 	    if(full){
-	       layer.full(index); 
+	       layer.full(index);
 	    }
 	}
 	/**
@@ -194,7 +194,7 @@
 		});
 	};
 	win.xadmin = new Xadmin();
-	
+
 }(window);
 
 layui.use(['layer','element','jquery'],function() {
@@ -242,8 +242,8 @@ layui.use(['layer','element','jquery'],function() {
             $('.page-content-bg').show();
         }
 
-        $('.left-nav').find('a').removeClass('active');
-        $(this).children('a').addClass('active');
+         $('.left-nav').find('a').removeClass('active');
+         $(this).children('a').addClass('active');
         if($(this).children('.sub-menu').length){
             if($(this).hasClass('open')){
                 $(this).removeClass('open');
@@ -259,7 +259,7 @@ layui.use(['layer','element','jquery'],function() {
                 $(this).siblings().removeClass('open');
             }
         }
-        event.stopPropagation(); 
+        event.stopPropagation();
     })
     var left_tips_index = null;
     $('.left-nav #nav').on('mouseenter', '.left-nav-li', function(event) {
@@ -270,7 +270,7 @@ layui.use(['layer','element','jquery'],function() {
     })
 
     $('.left-nav #nav').on('mouseout', '.left-nav-li', function(event) {
-        layer.close(left_tips_index); 
+        layer.close(left_tips_index);
     })
     // 隐藏左侧
     $('.container .left_open i').click(function(event) {

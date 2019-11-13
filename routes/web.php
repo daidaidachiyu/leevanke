@@ -36,9 +36,11 @@ Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('ver
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 
-
+//admin业务
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/', 'AdminController@index')->name('admin.index');
+    Route::get('/test', 'AdminController@test')->name('admin.test');
+    Route::get('/test1', 'AdminController@test1')->name('admin.test1');
 });
 
 
