@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'test11')
+@section('title', 'test2')
 
 @section('content')
-    <h1>这里是测试页面1111111</h1>
+    <h1>这里是权限测试页面2</h1>
 @endsection

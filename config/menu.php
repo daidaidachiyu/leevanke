@@ -10,41 +10,50 @@
 return [
     "List" => [
         [
-            'name' => '会员管理',
-            'icon' => '&#xe698',
+            'name' => '用户与权限管理',
             'children' => [
                 [
-                    'name' => '会员管理1',
-                    'children' => [
-                        [
-                            'name' => '尊贵的VIP1',
-                        ],
-                        [
-                            'name' => '尊贵的VIP2'
-                        ],
-                        [
-                            'name' => 'test',
-                            'route' => 'admin.test'
-                        ]
-                    ]
+                    'name'=>'用户管理',
+                    'route'=>'admin.userList'
                 ],
+                [
+                    'name'=>'角色管理',
+                    'route'=>'admin.roleList'
+                ],
+                [
+                    'name'=>'权限管理',
+                    'route'=>'admin.permissionList'
+                ]
             ]
         ],
         [
-            'name' => '单身贵族',
+            'name' => '多级菜单演示',
+            'icon' => '&#xe699',
             'children' => [
                 [
-                    'name' => '单身狗之子',
+                    'name' => '第二级菜单',
+                    'icon' => '&#xe699',
+                    'children' => [
+                        [
+                            'name' => '第三级菜单',
+
+                        ]
+                    ]
                 ]
             ]
         ],
 
         [
-            'name' => 'test',
+            'name' => '权限功能演示',
+            'icon' => '&#xe6b5',
             'children' => [
                 [
-                    'name' => 'test',
+                    'name' => '一号权限',
                     'route' => 'admin.test1'
+                ],
+                [
+                    'name' => '二号权限',
+                    'route' => 'admin.test2'
                 ]
             ]
         ]
